@@ -16,7 +16,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/img/logo/favicon.png" />
+        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/cdn@main/stockhub/images/favicon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,35 +24,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/fonts/materialdesignicons.css" />
+    <link rel="stylesheet" href="{% static 'vendor/fonts/materialdesignicons.css' %}" />
 
     <!-- Menu waves for no-customizer fix -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="{% static 'vendor/libs/node-waves/node-waves.css' %}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/css/core.css"
-        class="template-customizer-core-css" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/css/theme-default.css"
-        class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/css/demo.css" />
+    <link rel="stylesheet" href="{% static 'vendor/css/core.css' %}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{% static 'vendor/css/theme-default.css' %}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="{% static 'vendor/libs/perfect-scrollbar/perfect-scrollbar.css' %}" />
 
     <!-- Page CSS -->
     <!-- Page -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/css/pages/page-auth.css" />
+    <link rel="stylesheet" href="{% static 'vendor/css/pages/page-auth.css' %}" />
 
     <!-- Helpers -->
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/js/helpers.js"></script>
+    <script src="{% static 'vendor/js/helpers.js' %}"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/js/config.js"></script>
+    <script src="{% static 'js/config.js' %}"></script>
 </head>
 
 <body>
@@ -68,8 +61,8 @@
                         <a href="{% url 'index' %}" class="app-brand-link gap-2">
                             <span class="app-brand-logo demo">
                                 <span style="color: #9055fd">
-                                    <img src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/img/logo/stockhub.png"
-                                        style="width: 30px;" alt="Stockhub Logo" />
+                                    <img src="{% static 'img/logo/stockhub.png' %}" style="width: 30px;"
+                                        alt="Stockhub Logo" />
 
                                 </span>
                             </span>
@@ -96,14 +89,14 @@
                     </div>
                 </div>
                 <!-- /Login -->
-                <img src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/img/illustrations/tree-3.png"
-                    alt="auth-tree" class="authentication-image-object-left d-none d-lg-block" />
-                <img src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/img/illustrations/auth-basic-mask-light.png"
+                <img src="{% static 'img/illustrations/tree-3.png' %}" alt="auth-tree"
+                    class="authentication-image-object-left d-none d-lg-block" />
+                <img src="{% static 'img/illustrations/auth-basic-mask-light.png' %}"
                     class="authentication-image d-none d-lg-block" alt="triangle-bg"
                     data-app-light-img="illustrations/auth-basic-mask-light.png"
                     data-app-dark-img="illustrations/auth-basic-mask-dark.png" />
-                <img src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/img/illustrations/tree.png"
-                    alt="auth-tree" class="authentication-image-object-right d-none d-lg-block" />
+                <img src="{% static 'img/illustrations/tree.png' %}" alt="auth-tree"
+                    class="authentication-image-object-right d-none d-lg-block" />
             </div>
         </div>
     </div>
@@ -111,21 +104,19 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/jquery/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/popper/popper.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/js/bootstrap.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/node-waves/node-waves.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/vendor/js/menu.js"></script>
+    <script src="{% static 'vendor/libs/jquery/jquery.js' %}"></script>
+    <script src="{% static 'vendor/libs/popper/popper.js' %}"></script>
+    <script src="{% static 'vendor/js/bootstrap.js' %}"></script>
+    <script src="{% static 'vendor/libs/node-waves/node-waves.js' %}"></script>
+    <script src="{% static 'vendor/libs/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'vendor/js/menu.js' %}"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="https://cdn.jsdelivr.net/gh/LahcenEzzara/stockhub-cdn@main/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
     <!-- Page JS -->
 
