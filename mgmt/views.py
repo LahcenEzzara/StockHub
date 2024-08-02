@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def index(request):
-    return render(request, 'authentication/index.html')
+    return render(request, 'index.html')
 
 
 def login(request):
@@ -20,10 +20,10 @@ def login(request):
             return redirect(next_url)
         else:
             error_message = "Invalid username or password."
-            return render(request, 'authentication/login.html', {'error_message': error_message})
+            return render(request, 'mgmt/login.html', {'error_message': error_message})
     else:
         next_url = request.GET.get('next', '')
-        return render(request, 'authentication/login.html', {'next': next_url})
+        return render(request, 'mgmt/login.html', {'next': next_url})
 
 
 @login_required
