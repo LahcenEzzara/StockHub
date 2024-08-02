@@ -1,0 +1,19 @@
+{% extends "bs_base.html" %}
+
+{% block title %}
+Outgoing Page
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>Outgoing Index / List</h1>
+            <p>This is the outgoing index / list page.</p>
+            <a href="{% url 'index' %}" class="btn btn-primary">Home</a>
+            <br><br>
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

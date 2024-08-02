@@ -121,20 +121,20 @@
 
                         <ul class="menu-sub">
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{% url 'outgoing:new' %}" class="menu-link">
                                     <div>New Outgoing</div>
                                     <!-- <div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">Pro</div> -->
                                 </a>
                             </li>
 
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{% url 'outgoing:list' %}" class="menu-link">
                                     <div>Outgoing List</div>
                                 </a>
                             </li>
 
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{% url 'outgoing:graph' %}" class="menu-link">
                                     <div>Outgoing Graph</div>
                                 </a>
                             </li>
@@ -147,14 +147,14 @@
 
                     <!-- Apps -->
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{% url 'profile' %}" class="menu-link">
                             <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
                             <div>My Profile</div>
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{% url 'settings' %}" class="menu-link">
                             <i class="menu-icon tf-icons mdi mdi-cog-outline"></i>
                             <div>Settings</div>
                         </a>
@@ -174,14 +174,14 @@
                     <li class="menu-header fw-medium mt-4"><span class="menu-header-text">Administration</span></li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{% url 'new_user' %}" class="menu-link">
                             <i class="menu-icon tf-icons mdi mdi-account-plus"></i>
                             <div>New User</div>
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{% url 'users' %}" class="menu-link">
                             <i class="menu-icon tf-icons mdi mdi-account-multiple-outline"></i>
                             <div>Users</div>
                         </a>
@@ -267,14 +267,14 @@
                                     </li>
 
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="{% url 'profile' %}">
                                             <i class="mdi mdi-account-outline me-1 mdi-20px"></i>
                                             <span class="align-middle">My Profile</span>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="{% url 'settings' %}">
                                             <i class="mdi mdi-cog-outline me-1 mdi-20px"></i>
                                             <span class="align-middle">Settings</span>
                                         </a>
