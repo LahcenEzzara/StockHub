@@ -1,19 +1,79 @@
-{% extends "bs_base.html" %}
+{% extends "base.html" %}
+
+{% load static %}
 
 {% block title %}
-Outgoing Page
+StockHub - Outgoing Stock
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12">
-            <h1>Outgoing Index / List</h1>
-            <p>This is the outgoing index / list page.</p>
-            <a href="{% url 'index' %}" class="btn btn-primary">Home</a>
-            <br><br>
-            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="py-3 mb-4"><span class="text-muted fw-light">Outgoing Management /</span> Outgoing Stock</h4>
+        <div class="row gy-4">
+
+            <!-- Data Tables -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="text-truncate">Type</th>
+                                    <th class="text-truncate">Model</th>
+                                    <th class="text-truncate">Quantity</th>
+                                    <th class="text-truncate">Serial Number</th>
+                                    <th class="text-truncate">Description</th>
+                                    <th class="text-truncate">VNC</th>
+                                    <th class="text-truncate">BCI</th>
+                                    <th class="text-truncate">Plant</th>
+                                    <th class="text-truncate">Date Out</th>
+                                    <th class="text-truncate">Rack</th>
+                                    <th class="text-truncate">Comment</th>
+                                    <th class="text-truncate">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for outgoing in outgoings %}
+                                <tr>
+                                    <td class="text-truncate">{{ outgoing.type }}</td>
+                                    <td class="text-truncate">{{ outgoing.model }}</td>
+                                    <td class="text-truncate">{{ outgoing.quantity }}</td>
+                                    <td class="text-truncate">{{ outgoing.serial_number }}</td>
+                                    <td class="text-truncate">{{ outgoing.description }}</td>
+                                    <td class="text-truncate">{{ outgoing.vnc }}</td>
+                                    <td class="text-truncate">{{ outgoing.bci }}</td>
+                                    <td class="text-truncate">{{ outgoing.plant }}</td>
+                                    <td class="text-truncate">{{ outgoing.date_out }}</td>
+                                    <td class="text-truncate">{{ outgoing.rack }}</td>
+                                    <td class="text-truncate">{{ outgoing.comment }}</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="{% url 'view_outgoing' outgoing.id %}"><i
+                                                        class="mdi mdi-eye-outline me-1"></i> View</a>
+                                                <a class="dropdown-item" href="{% url 'edit_outgoing' outgoing.id %}"><i
+                                                        class="mdi mdi-pencil-outline me-1"></i> Edit</a>
+                                                <a class="dropdown-item" href="{% url 'delete_outgoing' outgoing.id %}"><i
+                                                        class="mdi mdi-trash-can-outline me-1"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!--/ Data Tables -->
     </div>
 </div>
+<!-- / Content -->
 {% endblock %}
